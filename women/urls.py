@@ -5,7 +5,9 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('categories/<int:catid>/', views.categories),
     path('about/', views.about, name='about'),
-    re_path(r'^archive/(?P<year>[0-9]{4})/', views.archive),
+    path('addpage/', views.addpage, name='add_page'),
+    path('contact/', views.contact, name='contact'),
+    path('login/', views.login, name='login'),
+    path('post/<int:post_id>', views.show_post, name='post'),
 ]
